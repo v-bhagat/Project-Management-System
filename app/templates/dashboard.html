@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome, {{ current_user.username }}!</h1>
+<div class="header-container">
+    <p>This is your dashboard where you can manage your projects and tasks.</p>
+
+    {% if current_user.role == 'admin' %}
+        <div class="add-project-button">
+            <a href="#" class="btn" id="openModal">Add Project</a>
+        </div>
+    {% endif %}
+</div>
+
+<h2>Your Projects</h2>
+<table class="project-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Project Name</th>
+            <th>Creation Date</th>
+            <th>Created By</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for project in projects %}
+            <tr>
+                <td>{{ project.id }}</td>
+                <td>
+                    <a href="{{ url_for('main.view_project', project_id=project.id) }}">{{ project.title }}</a>
+                </td>
+                <td>{{ project.date_created.strftime('%Y-%m-%d') }}</td>
+                <td>{{ project.creator.username }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">No projects created yet. <a href="{{ url_for('main.add_project') }}">Create one</a>.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Modal Structure -->
+<div id="addProjectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="{{ url_for('main.add_project') }}" method="POST">
+            <div>
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title" style="width: 95%; padding: 8px; margin-top: 5px;" required>
+            </div>
+            <div>
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" style="width: 95%; padding: 8px; margin-top: 5px;" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

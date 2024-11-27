@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Project</h2>
+<form method="POST">
+    <p>
+        <label>Project Title</label>
+        <input type="text" name="title" value="{{ project.title }}" required>
+    </p>
+    <p>
+        <label>Description</label>
+        <textarea name="description" required>{{ project.description }}</textarea>
+    </p>
+    <input type="submit" value="Update Project">
+</form>
+{% endblock %}

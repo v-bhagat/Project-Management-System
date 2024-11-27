@@ -1,0 +1,270 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set a default font */
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Navigation Bar */
+nav {
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding for the nav */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for horizontal alignment */
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between items */
+}
+
+nav a {
+    color: #fff; /* White links */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Forms */
+form {
+    background: #fff; /* White background for forms */
+    padding: 20px; /* Padding inside forms */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px; /* Limit form width */
+    margin: 20px auto; /* Center the form */
+}
+
+form p {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+form input[type="submit"] {
+    background: #5cb85c; /* Bootstrap success color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+form input[type="submit"]:hover {
+    background: #4cae4c; /* Darker green on hover */
+}
+
+/* Flash Messages */
+ul {
+    list-style-type: none; /* Remove bullets for messages */
+    padding: 10px; /* Add some padding */
+}
+
+.success {
+    color: green; /* Success messages in green */
+}
+
+.danger {
+    color: red; /* Error messages in red */
+}
+
+/* Project Table Dashboard */
+.project-table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Merge borders */
+    margin-top: 20px; /* Add some space above the table */
+}
+
+.project-table th, .project-table td {
+    padding: 12px; /* Add padding for cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Add a bottom border for rows */
+}
+
+.project-table th {
+    background-color: #f4f4f4; /* Light grey background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+.project-table tr:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+
+.project-table td a {
+    color: #007bff; /* Bootstrap primary color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.project-table td a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Base html */
+.padding10{
+    padding: 20px;
+}
+
+
+/* Task Table */
+.task-table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Merge borders */
+    margin-top: 20px; /* Add some space above the table */
+}
+
+.task-table th, .task-table td {
+    padding: 12px; /* Add padding for cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Add a bottom border for rows */
+}
+
+.task-table th {
+    background-color: #f4f4f4; /* Light grey background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+.task-table tr:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+
+.task-table td a {
+    color: #007bff; /* Bootstrap primary color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.task-table td a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Header Container Style */
+.header-container {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Button Container Style */
+.add-project-button {
+    margin-left: auto; /* Push the button to the right */
+}
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff; /* Bootstrap primary color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Add Task Button Container */
+.add-task-button {
+    margin-bottom: 15px; /* Space below the button */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items on small screens */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Space between stacked items */
+    }
+}
+
+
+
+/* TEST */
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 8px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for buttons */
+.btn {
+    padding: 10px 15px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Project table styling */
+.project-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+.project-table th, .project-table td {
+    border: 1px solid #ddd; /* Table border */
+    padding: 8px; /* Cell padding */
+    text-align: left; /* Align text to the left */
+}
+
+.project-table th {
+    background-color: #f2f2f2; /* Header background color */
+}
